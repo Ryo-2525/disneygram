@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users,
   controllers: { registrations: 'registrations' }
   
-  root to: 'homes#top'
+  root to: 'posts#index'
 
   resources :users, only: [:show]
 

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: %i(show destroy)
+  before_action :set_post, only: [:show, :destroy]
 
   def index
     @posts = Post.all.limit(10).includes(:photos, :user, :likes).order('created_at DESC')
