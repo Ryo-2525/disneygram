@@ -1,7 +1,7 @@
 class Photo < ApplicationRecord
   # PostモデルとPhotoモデルのアソシエーション
   belongs_to :post
-
+  # 写真をアップロードしていない場合は投稿できないように
   validates :image, presence: true
 
   # PhotoモデルのimageカラムとCarrierWaveのアップローダー紐付け
