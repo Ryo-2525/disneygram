@@ -6,7 +6,6 @@
     <div class="col-md-8">
       <div class="row">
         <h1><%= @user.name %></h1>
-        <%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-dark common-btn edit-profile-btn" %>
         <button type="button" class="setting" data-toggle="modal" data-target="#exampleModal"></button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -19,6 +18,7 @@
                 </button>
               </div>
               <div class="list-group text-center">
+                <%= link_to "プロフィールを編集", edit_user_registration_path, class: "list-group-item list-group-item-action" %>
                 <%= link_to "サインアウト", destroy_user_session_path, method: :delete, class: "list-group-item list-group-item-action" %>
                 <%= link_to "キャンセル", "#", class: "list-group-item list-group-item-action", "data-dismiss": "modal" %>
               </div>
@@ -29,7 +29,14 @@
       <% if @user == current_user %>
         <div class="row">
           <p>
+            <%= label :email, "メールアドレス：" %>
             <%= @user.email %>
+          </p>
+        </div>
+         <div class="row">
+          <p>
+            <%= label :bio, "自己紹介：" %><br>
+            <%= @user.bio %>
           </p>
         </div>
       <% end %>
