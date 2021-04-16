@@ -1,9 +1,12 @@
 class HomesController < ApplicationController
 
   def top
-    if !user_signed_in?
-      redirect_to new_user_session_path
-    end
+    @posts = Post.all.limit(5).includes(:photos).order('created_at DESC')
+
+  end
+
+  def about
+
   end
 
 end
