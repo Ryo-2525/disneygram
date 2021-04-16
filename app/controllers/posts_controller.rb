@@ -18,15 +18,15 @@ class PostsController < ApplicationController
         if Photo.picture_size?(img)
           @post.save
           @post.photos.create(image: img)
-          redirect_to root_path
+          redirect_to posts_path
           flash[:notice] = "投稿が保存されました"
         else
-          redirect_to root_path
+          redirect_to posts_path
           flash[:alert] = "投稿に失敗しました。画像サイズが1MB超えてます。"
         end
       end
     else
-      redirect_to root_path
+      redirect_to posts_path
       flash[:alert] = "投稿に失敗しました"
     end
   end
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
     else
       flash[:alert] = "削除に失敗しました"
     end
-    redirect_to root_path
+    redirect_to posts_path
   end
 
   private
