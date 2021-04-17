@@ -14,14 +14,12 @@
 //= require popper
 //= require bootstrap-sprockets
 
-//= require jquery_ujs
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
 
-
-$(document).ready(function () {
+$(document).on('turbolinks:load', function() {
   $("#images").skippr({
     // スライドショーの変化 ("fade" or "slide")
     transition : 'slide',
