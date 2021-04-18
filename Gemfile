@@ -68,3 +68,8 @@ gem 'font-awesome-sass', '~> 5.13'
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem 'rails-i18n'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
