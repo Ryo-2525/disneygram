@@ -9,7 +9,7 @@
   }
   &__mainLogo {
     background-repeat: no-repeat;
-    background-image: url("logo.png");
+    background-image: image-url("logo.png");
     
   }
   &-nav {
@@ -25,7 +25,7 @@
         background-repeat: no-repeat;
       }
       .profile-icon {
-        background-image: url("parts3.png");
+        background-image: image-url("parts3.png");
       }
     }
   }
