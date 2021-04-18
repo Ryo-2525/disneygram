@@ -1,0 +1,22 @@
+<div class="main">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-8 mx-auto">
+      <div class="form-wrap">
+        <div class="form-group text-center">
+          <h2 class="mx-auto">Welcom to Disneygram！</h2>
+          <p class="form-sub-color">友達の写真や動画をチェックしよう</p>
+        </div>
+        <div id="slider">
+          <div id="images">
+            <% @posts.each do |post| %>
+              <%= link_to(post_path(post)) do %>
+              <%= image_tag post.photos.first.image.url(:medium), size: '600x600' %>
+              <% end %>
+            <% end %> 
+          </div>
+        </div>
+        <p class="text-right mb-0"><%= link_to "全ての投稿を見る", posts_path %></p>
+    </div>
+  </div>
+</div>
+
