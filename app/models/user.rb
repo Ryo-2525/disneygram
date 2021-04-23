@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 50 }
 
-  # Devise でユーザーがパスワードなしでアカウント情報を変更するのを許可
+  # Deviseでユーザーがパスワードなしでアカウント情報を変更するのを許可
   def update_without_current_password(params, *options)
     params.delete(:current_password)
 
