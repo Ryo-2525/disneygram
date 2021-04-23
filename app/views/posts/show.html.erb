@@ -27,7 +27,10 @@
             <% end %>
 
           </div>
+          <%= link_to time_ago_in_words(@post.created_at).upcase + "前", post_path(@post), class: "far fa-clock post-time no-text-decoration" %>
+            
           <div class="m-2">
+            
             <strong>
               <%= @post.caption %>
             </strong>
