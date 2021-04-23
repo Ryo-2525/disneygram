@@ -26,6 +26,15 @@ body {
   color: #262626;
 }
 
+a {
+  color: #000;
+}
+
+h2 {
+  font-size:46px;
+}
+
+
 .logo-img {
   background-image: image-url("logo.png");
   background-repeat: no-repeat;
@@ -209,4 +218,69 @@ body {
   height: 600px;
 }
 
+// top,aboutページ
+.topmain {
+  background-image: url("top_bg.png");
+  background-size: cover;
+  background-position: left center;
+  border-radius: 5%;
+}
+.topbg {
+  background: rgba(255,255,255,.4);
+  height: 100%;
+}
 
+.top-section-title {
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  width: 65%;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.copy-container h1 {
+  font-size: 90px;
+}
+
+.copy-container h2 {
+  font-size: 60px;
+}
+
+.copy-container span {
+  color: #ff4a4a;
+}
+
+.contents {
+  width: 100%;
+  height: 500px;
+}
+
+
+.contents-item {
+  float: left;
+  margin-right: 40px;
+  
+}
+
+.contents-item p {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.aboutmain {
+  background-image: url("about_bg.png");
+  background-size: cover;
+  border-radius: 5%;
+}
+.aboutbg {
+  background: rgba(255,255,255,.5);
+  height: 100%;
+}
+
+.about-section-title {
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  
+}

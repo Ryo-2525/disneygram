@@ -17,7 +17,6 @@
               </div>
             <% end %>
           <% end %>
-
         </div>
 
         <%= link_to(post_path(post)) do %>
@@ -45,13 +44,11 @@
           <div>
             <span><strong><%= post.user.name %></strong></span>
             <span><%= post.caption %></span>
-            <%= link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post), class: "post-time no-text-decoration" %>
+            <%= link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post), class: "far fa-clock post-time no-text-decoration" %>
             
             <div id="comment-post-<%= post.id.to_s %>">
               <%= render 'comment_list', { post: post } %>
             </div>
-            <%= link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post),
-              class: "light-color post-time no-text-decoration" %>
             <hr>
             <div class="row actions" id="comment-form-post-<%= post.id.to_s %>">
               <%= form_with model: [post, Comment.new], class: "w-100" do |f| %>
