@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   # UserモデルとPostモデルのアソシエーション
   has_many :posts, dependent: :destroy
 
@@ -8,7 +7,6 @@ class User < ApplicationRecord
 
   # UserモデルとCommentモデルのアソシエーション
   has_many :comments
-
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -30,6 +28,4 @@ class User < ApplicationRecord
     clean_up_passwords
     result
   end
-
-
 end

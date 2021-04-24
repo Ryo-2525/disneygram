@@ -3,5 +3,4 @@ class Comment < ApplicationRecord
   belongs_to :post
   # UserモデルとCommentモデルのアソシエーション
   belongs_to :user
-  
 end
