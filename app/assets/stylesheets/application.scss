@@ -26,12 +26,9 @@ body {
   color: #262626;
 }
 
-a {
-  color: #000;
-}
 
 h2 {
-  font-size:46px;
+  font-size: 46px;
 }
 
 
@@ -45,8 +42,8 @@ h2 {
 }
 
 .form-wrap{
-  padding:20px 20px;
-  margin:20px 0px;
+  padding: 20px 20px;
+  margin: 20px 0px;
 }
 
 .copyright {
@@ -54,11 +51,11 @@ h2 {
 }
 
 .profile-wrap{
-  margin:40px 0px;
+  margin: 40px 0px;
 }
 
 .round-img{
-  border-radius:50%;
+  border-radius: 50%;
   width: 120px;
   height: 120px;
 }
@@ -74,12 +71,11 @@ h2 {
 }
 
 .setting {
-  background-image: image-url("parts4.png");
-  background-repeat: no-repeat;
+  font-size: 30px;
   height: 24px;
   width: 24px;
   background-color: transparent;
-  margin: 18px 0 0 10px;
+  margin: 15px 0 0 10px;
   background-size: 22px!important;
   border: none;
   &:hover {
@@ -109,7 +105,7 @@ h2 {
 }
 
 .card-wrap {
-  margin:40px 0px;
+  margin: 40px 0px;
 }
 
 .no-text-decoration:hover {
@@ -141,18 +137,17 @@ h2 {
 }
 
 .comment {
+  font-size: 30px;
   margin-left: 8px;
-  background-image: image-url("parts6");
-  background-repeat: no-repeat;
   height: 36px;
   width: 36px;
   background-size: 40px !important;
 }
 
 .post-time {
-  margin:0;
+  margin: 0;
   color:#999;
-  font-size:10px;
+  font-size: 10px;
 }
 
 .post-sub-text {
@@ -168,8 +163,7 @@ h2 {
 }
 
 .delete-comment {
-  background-image: image-url("parts8");
-  background-repeat: no-repeat;
+  
   width: 11px;
   height: 11px;
   float: right;
@@ -188,6 +182,7 @@ h2 {
 .card-right-name {
   padding-bottom: 10px;
   border-bottom: 1px solid #e6e6e6;
+  display: flex;
 }
 
 .card-right-comment {
@@ -199,12 +194,17 @@ h2 {
 
 .postShow-wrap {
   border: 1px solid #e6e6e6;
-  margin-top: 40px;
+  margin: 40px;
+}
+
+.post-user-name {
+  display: flex;
+  align-items: center;
+  line-height: 0;
 }
 
 .delete-post-icon {
-  background-image: image-url("parts9");
-  background-repeat: no-repeat;
+  
   width: 20px;
   height: 20px;
   background-size: 20px !important;

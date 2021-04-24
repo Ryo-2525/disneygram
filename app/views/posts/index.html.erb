@@ -13,8 +13,7 @@
 
           <% if post.user_id == current_user.id %>
             <%= link_to post_path(post), method: :delete, class: "ml-auto mx-0 my-auto" do %>
-              <div class="delete-post-icon">
-              </div>
+              
             <% end %>
           <% end %>
         </div>
@@ -34,7 +33,7 @@
               <% end %>
             </div>
 
-            <%= link_to "", "#", class: "comment" %>
+            <i class="far fa-comments comment"></i>
           </div>
 
           <div id="like-text-post-<%= post.id.to_s %>">

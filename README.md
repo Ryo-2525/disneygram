@@ -24,6 +24,15 @@
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1BrYybPfav8JN5oL0sMg1ZFRhqfOhgeLMXRutYziDn9M/edit?usp=sharing
 
+## 画面設計書
+
+## ER図
+
+## テーブル定義書
+https://drive.google.com/file/d/1DnnrvLgMZd_E2iFiYlnGc5QNU-cV-zFJ/view?usp=sharing
+## アプリケーション詳細設計書
+https://drive.google.com/file/d/11NmKlfzLcubjBGLoQ84QbmKZyfRj-Til/view?usp=sharing
+
 ## 開発環境
 - OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
