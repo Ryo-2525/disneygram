@@ -163,7 +163,7 @@ h2 {
 }
 
 .delete-comment {
-  
+
   width: 11px;
   height: 11px;
   float: right;
@@ -204,7 +204,7 @@ h2 {
 }
 
 .delete-post-icon {
-  
+
   width: 20px;
   height: 20px;
   background-size: 20px !important;
@@ -220,7 +220,7 @@ h2 {
 
 // top,aboutページ
 .topmain {
-  background-image: url("top_bg.png");
+  background-image: image-url("top_bg.png");
   background-size: cover;
   background-position: left center;
   border-radius: 5%;
@@ -259,7 +259,7 @@ h2 {
 .contents-item {
   float: left;
   margin-right: 40px;
-  
+
 }
 
 .contents-item p {
@@ -268,7 +268,7 @@ h2 {
 }
 
 .aboutmain {
-  background-image: url("about_bg.png");
+  background-image: image-url("about_bg.png");
   background-size: cover;
   border-radius: 5%;
 }
@@ -282,5 +282,5 @@ h2 {
   font-size: 28px;
   padding-bottom: 15px;
   margin-bottom: 50px;
-  
+
 }
