@@ -21,13 +21,16 @@
 
             <% if @post.user_id == current_user.id %>
               <%= link_to post_path(@post), method: :delete, class: "ml-auto mx-0 my-auto" do %>
-                <div class="delete-post-icon">
+                <div class="fas fa-trash-alt delete-post-icon">
                 </div>
               <% end %>
             <% end %>
 
           </div>
+          <%= link_to time_ago_in_words(@post.created_at).upcase + "前", post_path(@post), class: "far fa-clock post-time no-text-decoration" %>
+            
           <div class="m-2">
+            
             <strong>
               <%= @post.caption %>
             </strong>

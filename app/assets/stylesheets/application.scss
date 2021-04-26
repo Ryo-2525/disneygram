@@ -26,6 +26,12 @@ body {
   color: #262626;
 }
 
+
+h2 {
+  font-size: 46px;
+}
+
+
 .logo-img {
   background-image: image-url("logo.png");
   background-repeat: no-repeat;
@@ -36,8 +42,8 @@ body {
 }
 
 .form-wrap{
-  padding:20px 20px;
-  margin:20px 0px;
+  padding: 20px 20px;
+  margin: 20px 0px;
 }
 
 .copyright {
@@ -45,11 +51,11 @@ body {
 }
 
 .profile-wrap{
-  margin:40px 0px;
+  margin: 40px 0px;
 }
 
 .round-img{
-  border-radius:50%;
+  border-radius: 50%;
   width: 120px;
   height: 120px;
 }
@@ -65,12 +71,11 @@ body {
 }
 
 .setting {
-  background-image: image-url("parts4.png");
-  background-repeat: no-repeat;
+  font-size: 30px;
   height: 24px;
   width: 24px;
   background-color: transparent;
-  margin: 18px 0 0 10px;
+  margin: 15px 0 0 10px;
   background-size: 22px!important;
   border: none;
   &:hover {
@@ -100,7 +105,7 @@ body {
 }
 
 .card-wrap {
-  margin:40px 0px;
+  margin: 40px 0px;
 }
 
 .no-text-decoration:hover {
@@ -132,18 +137,17 @@ body {
 }
 
 .comment {
+  font-size: 30px;
   margin-left: 8px;
-  background-image: image-url("parts6");
-  background-repeat: no-repeat;
   height: 36px;
   width: 36px;
   background-size: 40px !important;
 }
 
 .post-time {
-  margin:0;
+  margin: 0;
   color:#999;
-  font-size:10px;
+  font-size: 10px;
 }
 
 .post-sub-text {
@@ -159,8 +163,7 @@ body {
 }
 
 .delete-comment {
-  background-image: image-url("parts8");
-  background-repeat: no-repeat;
+  
   width: 11px;
   height: 11px;
   float: right;
@@ -179,6 +182,7 @@ body {
 .card-right-name {
   padding-bottom: 10px;
   border-bottom: 1px solid #e6e6e6;
+  display: flex;
 }
 
 .card-right-comment {
@@ -190,12 +194,17 @@ body {
 
 .postShow-wrap {
   border: 1px solid #e6e6e6;
-  margin-top: 40px;
+  margin: 40px;
+}
+
+.post-user-name {
+  display: flex;
+  align-items: center;
+  line-height: 0;
 }
 
 .delete-post-icon {
-  background-image: image-url("parts9");
-  background-repeat: no-repeat;
+  
   width: 20px;
   height: 20px;
   background-size: 20px !important;
@@ -209,4 +218,69 @@ body {
   height: 600px;
 }
 
+// top,aboutページ
+.topmain {
+  background-image: url("top_bg.png");
+  background-size: cover;
+  background-position: left center;
+  border-radius: 5%;
+}
+.topbg {
+  background: rgba(255,255,255,.4);
+  height: 100%;
+}
 
+.top-section-title {
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  width: 65%;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.copy-container h1 {
+  font-size: 90px;
+}
+
+.copy-container h2 {
+  font-size: 60px;
+}
+
+.copy-container span {
+  color: #ff4a4a;
+}
+
+.contents {
+  width: 100%;
+  height: 500px;
+}
+
+
+.contents-item {
+  float: left;
+  margin-right: 40px;
+  
+}
+
+.contents-item p {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.aboutmain {
+  background-image: url("about_bg.png");
+  background-size: cover;
+  border-radius: 5%;
+}
+.aboutbg {
+  background: rgba(255,255,255,.5);
+  height: 100%;
+}
+
+.about-section-title {
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  
+}

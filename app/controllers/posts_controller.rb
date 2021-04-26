@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: [:show, :destroy]
+  before_action :set_post, only: %i[show destroy]
 
   def index
     @posts = Post.all.limit(10).includes(:photos, :user, :likes).order('created_at DESC')
@@ -19,15 +19,15 @@ class PostsController < ApplicationController
           @post.save
           @post.photos.create(image: img)
           redirect_to posts_path
-          flash[:notice] = "投稿が保存されました"
+          flash[:notice] = '投稿が保存されました'
         else
           redirect_to posts_path
-          flash[:alert] = "投稿に失敗しました。画像サイズが1MB超えてます。"
+          flash[:alert] = '投稿に失敗しました。画像サイズが1MB超えてます。'
         end
       end
     else
       redirect_to posts_path
-      flash[:alert] = "投稿に失敗しました"
+      flash[:alert] = '投稿に失敗しました'
     end
   end
 
@@ -38,19 +38,20 @@ class PostsController < ApplicationController
 
   def destroy
     if @post.user == current_user
-      flash[:notice] = "投稿が削除されました" if @post.destroy
+      flash[:notice] = '投稿が削除されました' if @post.destroy
     else
-      flash[:alert] = "削除に失敗しました"
+      flash[:alert] = '削除に失敗しました'
     end
     redirect_to posts_path
   end
 
   private
-    def post_params
-      params.require(:post).permit(:caption).merge(user_id: current_user.id)
-    end
 
-    def set_post
-      @post = Post.find_by(id: params[:id])
-    end
+  def post_params
+    params.require(:post).permit(:caption).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find_by(id: params[:id])
+  end
 end

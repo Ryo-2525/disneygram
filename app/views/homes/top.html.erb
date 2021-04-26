@@ -1,22 +1,32 @@
-<div class="main">
+<div class="topmain">
+  <div class="topbg">
   <div class="container">
-    <div class="col-md-8 col-md-offset-8 mx-auto">
+    <div class="col-md-12 col-md-offset-12 mx-auto">
       <div class="form-wrap">
+        <div class="copy-container">
+          <h1>Welcom to Disneygram<span>!!</span></h1>
+        </div>
         <div class="form-group text-center">
-          <h2 class="mx-auto">Welcom to Disneygram！</h2>
-          <p class="form-sub-color">友達の写真や動画をチェックしよう</p>
+          <h2 class="mx-auto">Disneygramの世界へようこそ</h2>
         </div>
-        <div id="slider">
-          <div id="images">
-            <% @posts.each do |post| %>
-              <%= link_to(post_path(post)) do %>
-              <%= image_tag post.photos.first.image.url(:medium), size: '600x600' %>
-              <% end %>
-            <% end %> 
-          </div>
+      </div>
+    </div>
+    <div class="col-md-11 col-md-offset-11 mx-auto">
+      <div>
+        <h3 class="top-section-title">新着投稿</h3>
+        <p class="text-center mb-2"><%= link_to "全ての投稿を見る>>", posts_path, class: "text-secondary" %></p>
+      </div>
+      <div id="slider">
+        <div id="images">
+          <% @posts.each do |post| %>
+            <%= link_to(post_path(post)) do %>
+            <%= image_tag post.photos.first.image.url(:medium), size: '600x600' %>
+            <% end %>
+          <% end %> 
         </div>
-        <p class="text-right mb-0"><%= link_to "全ての投稿を見る", posts_path %></p>
+      </div>
     </div>
   </div>
+</div>
 </div>
 
