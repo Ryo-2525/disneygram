@@ -1,4 +1,4 @@
-# Disneygram(仮)
+# Disneygram
 
 ## サイト概要
 ディズニー好き交流、情報交換サイト
