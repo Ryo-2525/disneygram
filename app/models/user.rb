@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   # UserモデルとPostモデルのアソシエーション
   has_many :posts, dependent: :destroy
 
@@ -9,7 +8,6 @@ class User < ApplicationRecord
   # UserモデルとCommentモデルのアソシエーション
   has_many :comments
 
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -17,7 +15,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 50 }
 
-  # Devise でユーザーがパスワードなしでアカウント情報を変更するのを許可
+  # Deviseでユーザーがパスワードなしでアカウント情報を変更するのを許可
   def update_without_current_password(params, *options)
     params.delete(:current_password)
 
@@ -30,6 +28,4 @@ class User < ApplicationRecord
     clean_up_passwords
     result
   end
-
-
 end
