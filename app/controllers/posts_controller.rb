@@ -46,7 +46,6 @@ class PostsController < ApplicationController
   end
 
   private
-
   def post_params
     params.require(:post).permit(:caption).merge(user_id: current_user.id)
   end
@@ -55,3 +54,4 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
   end
 end
+

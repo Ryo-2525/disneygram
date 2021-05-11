@@ -4,6 +4,7 @@
       <div class="card-header">
         新規投稿
       </div>
+      
       <div class="card-body">
         <%= form_for @post, html: { multipart: true, class: "upload-images p-0 border-0" } do |f| %>
           <div class="form-group row mt-2">
@@ -15,9 +16,11 @@
               <%= f.text_field :caption, class: "form-control border-0", placeholder: "キャプションを書く" %>
             </div>
           </div>
+          
           <div class="mb-3">
             <%= file_field_tag "images[]", type: :file, multiple: false, accept: 'image/jpeg,image/gif,image/png', id: "post_image" %>
           </div>
+          
           <%= f.submit "投稿する", class: "btn btn-primary" %>
         <% end %>
       </div>
