@@ -9,6 +9,5 @@ class HomesController < ApplicationController
     @posts = Post.all.limit(LIMIT).includes(:photos).order('created_at DESC')
   end
 
-
   def about; end
 end
