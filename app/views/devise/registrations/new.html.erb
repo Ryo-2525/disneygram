@@ -7,6 +7,7 @@
           <p class="form-sub-color">みんなの投稿をチェックしよう</p>
         </div>
         <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+        
           <div class="form-group">
             <%= f.email_field :email, autofocus: true, placeholder: "メールアドレス", class: "form-control" %>
           </div>
@@ -27,9 +28,7 @@
             <%= f.submit "登録", class: "btn btn-primary w-100" %>
           </div>
         <% end %>
-
         <br>
-
       </div>
 	  <%= render "devise/shared/links" %>
     </div>
